@@ -30,6 +30,21 @@ body{
 	margin:0 0; 
 	font-family: 'Open Sans', sans-serif;
 }
+
+.select{
+    padding:3px;
+    margin: 0;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    background: gray;
+    color: #fff;
+    opacity: 0.8;
+    border:none;
+    outline:none;
+    height: 30px;
+}
+
 .copyrights{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
 .header {
   background: url("../images/banner.jpg")no-repeat 0px 0px;
@@ -41,6 +56,18 @@ body{
   -o-background-size: cover;
   -ms-background-size: cover;
 }
+
+.header1 {
+  background: url("../images/banner1.jpg")no-repeat 0px 0px;
+  background-size:cover;
+  min-height: 700px;
+  text-align: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+}
+
 .header-top {
   margin-top: 1em;
   background: rgba(0, 0, 0, 0.41);
