@@ -13,15 +13,27 @@
 <form class="box login">
 	<fieldset class="boxBody">
 	  <label>Username</label>
-	  <input type="text" tabindex="1" placeholder="EmailorNetID" required>
+	  <input name="username" type="text" tabindex="1" placeholder="EmailorNetID" required>
 	  <label><a href="#" class="rLink" tabindex="5">Forget your password?</a>Password</label>
-	  <input type="password" tabindex="2" required>
+	  <input name="password" type="password" tabindex="2" required>
 	</fieldset>
 	<footer>
-	  <label><input type="checkbox" tabindex="3">Manager</label>
-	  <label><input type="checkbox" tabindex="3">Student</label>
-	  <input type="submit" class="btnLogin" value="Login" tabindex="4" onclick = "location.href='home-user.html'">
+		<input type="radio" name="identity" value="student" checked="checked">Student<br>
+		<input type="radio" name="identity" value="manager">Manager<br>
+	  	<input type="submit" class="btnLogin" value="Login" tabindex="4" onclick="login()">
 	</footer>
 </form>
+
+<script type="text/javascript">
+function login() {
+	var radios = document.getElementsByName('identity');
+	var identity;
+	if (radios[0].checked) { // student
+		location.href = 'home-student.html';
+	} else {
+		location.href = 'home-manager.html';
+	}
+}
+</script>
 </body>
 </html>
