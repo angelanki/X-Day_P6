@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Simple Login Form</title>
+<meta charset="UTF-8" />
+<meta name="Designer" content="xday">
+<meta name="Author" content="xday">
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/structure.css">
+</head>
+
+<body>
+<form class="box login">
+    <fieldset class="boxBody">
+      <label>Username</label>
+      <input name="username" type="text" tabindex="1" placeholder="EmailorNetID" required>
+      <label><a href="#" class="rLink" tabindex="5">Forget your password?</a>Password</label>
+      <input name="password" type="password" tabindex="2" required>
+    </fieldset>
+    <footer>
+        <input type="radio" name="identity" value="student" checked="checked">Student<br>
+        <input type="radio" name="identity" value="manager">Manager<br>
+        <input type="submit" class="btnLogin" value="Login" tabindex="4" onclick="login()">
+    </footer>
+</form>
+
+<script type="text/javascript">
+function login() {
+    var radios = document.getElementsByName('identity');
+    var identity;
+    if (radios[0].checked) { // student
+        location.href = 'proposal-submit.html';
+    } else {
+        location.href = 'home-manager.html';
+    }
+}
+</script>
+</body>
+</html>
