@@ -7,19 +7,21 @@
 <meta name="Author" content="xday">
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="css/structure.css">
+<link href='http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.useso.com/css?family=Josefin+Sans:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 <form class="box login">
     <fieldset class="boxBody">
       <label>Username</label>
-      <input name="username" type="text" tabindex="1" placeholder="EmailorNetID" required>
+      <input name="username" type="text" tabindex="1" placeholder="Email or NetID" required>
       <label><a href="#" class="rLink" tabindex="5">Forget your password?</a>Password</label>
       <input name="password" type="password" tabindex="2" required>
     </fieldset>
     <footer>
-        <input type="radio" name="identity" value="student" checked="checked">Student<br>
-        <input type="radio" name="identity" value="manager">Manager<br>
+        <input type="radio" name="identity" value="manager">Manager
+        <input type="radio" name="identity" value="student" checked="checked">Student  
         <input type="submit" class="btnLogin" value="Login" tabindex="4" onclick="login()">
     </footer>
 </form>

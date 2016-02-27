@@ -2,8 +2,6 @@
 <html>
 <head>
 <title>Home</title>
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Cultivation Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
@@ -13,10 +11,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 <link href='http://fonts.useso.com/css?family=Josefin+Sans:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
 <script src="js/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
  <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
 <!---- start-smoth-scrolling---->
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
  <script type="text/javascript">
 		jQuery(document).ready(function($) {
 			$(".scroll").click(function(event){		
@@ -80,7 +83,64 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<input type="submit" value="">
 						</form>
 					</div>
-	<div class="login"><a href="login.html">Log in</a></div>
+	
+
+	<div class="login"><a href="" data-toggle="modal" data-target="#myModal">Log in</a></div>
+
+	<div class="modal fade" id="myModal" role="dialog">
+
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+
+			<div class="modal-content">
+
+				<div class="modal-header">
+
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+
+					<h4 class="modal-title" style="font-size:2em; font-family:'Josefin Sans', sans-serif">Log In</h4>
+
+				</div>
+
+			<!-- <div class="modal-body">
+
+				<p>Submit Successfully!</p>
+
+			</div> -->
+
+			<div class="modal-footer">
+				<table>
+			<tr>
+      			<td><input id="modal-text" name="username" type="text" tabindex="1" placeholder="Username or E-mail"  style="padding-top:10px;" required></td>
+      			<td><input id="modal-text" name="password" type="password" tabindex="1" placeholder="Password" style="padding-top:10px" required><br></td>
+      		</tr>
+      		<tr>
+				<td><input type="radio" name="identity" value="manager" style="margin-right: 10px; margin-top: 20px"><a style="margin:30px 20px 0px 0px; font-size:1.5em;text-transform: capitalize;text-decoration: none; font-family: 'Josefin Sans', sans-serif;">Manager</a>
+				<input type="radio" name="identity" value="student" checked="checked" style="margin-right: 10px"><a style="margin:30px 0px 0px 0px;font-size:1.5em; font-family: 'Josefin Sans', sans-serif; text-transform: capitalize;text-decoration: none;">Student</a></td>
+			</tr>
+		</table>
+				<button type="button" class="btn btn-success" data-dismiss="modal" onclick="login()" style="float:left; margin-top: 20px; background-color: #855CD4; width:200px; opacity:0.8; border: solid #855CD4">Log In</button>
+			</div>
+
+		</div>
+
+
+	</div>
+
+</div>
+<script type="text/javascript">
+function login() {
+	var radios = document.getElementsByName('identity');
+	var identity;
+	if (radios[0].checked) { // student
+		location.href = 'home-student.html';
+	}
+	else {
+		location.href = 'home-manager.html';
+	}
+}
+</script>
 
 
 		<div class="clearfix"></div>
